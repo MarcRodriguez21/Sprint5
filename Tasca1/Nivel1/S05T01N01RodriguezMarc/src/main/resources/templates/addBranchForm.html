@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Branch</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+    h2 {
+            color:#A7FF33;
+            font-family: candara, sans-serif;
+            font-size: 36px;
+            text-align: center;
+            background-image: url('https://img.freepik.com/vector-gratis/fondo-gradiente-blanco-vectorial-diseno-moderno_361591-4395.jpg?t=st=1720028109~exp=1720031709~hmac=aaa9a99687bf58797fff4e54bf2bfef45a42a9cffa4d0b04cf274f5a9fee716b&w=1060');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/005/441/523/non_2x/abstract-white-and-gray-gradient-background-with-geometric-shape-illustration-vector.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+
+          }
+    .btn-primary{
+            color: #A7FF33;
+            border-color: #A7FF33;
+        }
+    .btn-primary:hover {
+            background-color: #A7FF33;
+            color: white;
+        }
+</style>
+</head>
+<body>
+<div class="container mt-4">
+    <div>
+        <h2>Add New Branch</h2>
+        <form  action="#" th:action="@{/branches/add}" th:object="${newBranch}" method="POST">
+            <div class="form-group">
+                <label for="branchName">Branch Name</label>
+                <input type="text" class="form-control" id="branchName" name="branchName" required>
+            </div>
+            <div class="form-group">
+                <label for="branchCountry">Branch Country</label>
+                <input type="text" class="form-control" id="branchCountry" name="branchCountry" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Branch</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
