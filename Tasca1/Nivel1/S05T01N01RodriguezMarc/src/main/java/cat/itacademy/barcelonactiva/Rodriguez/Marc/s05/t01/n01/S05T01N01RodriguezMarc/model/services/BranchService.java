@@ -24,7 +24,6 @@ public class BranchService implements BranchInterface {
     @Override
     public void updateBranch(BranchDTO branchDTO) {
         Optional<Branch> optionalBranch = branchReopository.findById(branchDTO.getBranchId());
-
         if (optionalBranch.isPresent()) {
             Branch existingBranch = optionalBranch.get();
             existingBranch.setBranchName(branchDTO.getBranchName());
